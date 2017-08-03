@@ -25,9 +25,21 @@
 
 ### 安装类库 
 
+方式一:
 ```
 composer require phpcasts/yaf-library -vvv
 ```
+
+方式二:
+
+```
+git clone https://github.com/qloog/yaf-library
+```
+
+修改配置文件的: application.library = APP_PATH "/library"
+为: application.library = APP_ROOT "/../yaf-library" 
+
+PS: yaf-library与项目同级 
 
 ### 添加配置
 
@@ -61,6 +73,15 @@ log.file.dir = APP_ROOT "/storage/logs"
 
 ## Usage
 
+以使用Cache为例:
 
+```
+use PHPCasts\Caches\Cache;
+...
+ 
+ $cache = Cache::getInstance();
+ $cache->set('test', 'test-value');
+
+```
     
 
