@@ -1,0 +1,21 @@
+{
+  "name": "phpcasts/yaf-library",
+  "description": "yaf-library",
+  "keywords": ["yaf-library","yaf","library"],
+  "license": "MIT",
+  "type": "library",
+  "minimum-stability": "dev",
+  "require": {
+    "monolog/monolog": "^1.13",
+    "pimple/pimple": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.7.3"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
