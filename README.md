@@ -45,7 +45,7 @@ redis.default.port = 6379
 ;database
 database.driver     = mysql
 database.host       = localhost
-database.database   = laravel5
+database.database   = test
 database.username   = root
 database.password   = 123456
 database.port       = 3306
