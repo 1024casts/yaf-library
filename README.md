@@ -26,13 +26,13 @@
 ### 安装类库 
 
 方式一:
-```
+```shell
 composer require phpcasts/yaf-library -vvv
 ```
 
 方式二:
 
-```
+```shell
 git clone https://github.com/qloog/yaf-library
 ```
 
@@ -45,7 +45,7 @@ PS: yaf-library与项目同级
 
 打开 conf/application.ini, 添加一下配置:
 
-```
+```php
 ; cache
 cache.type = redis
 cache.redis = default
@@ -67,15 +67,24 @@ database.prefix     = ""
 
 ; Log
 log.level = debug
-log.channel = business
+log.channel = default
 log.file.dir = APP_ROOT "/storage/logs"
+```
+
+### 添加常量定义
+
+一般定义在public/index.php文件中
+
+```php
+define('APP_ROOT', dirname(__DIR__));
+define('APP_PATH', APP_ROOT . '/application');
 ```
 
 ## Usage
 
 以使用Cache为例:
 
-```
+```php
 use PHPCasts\Caches\Cache;
 ...
  
