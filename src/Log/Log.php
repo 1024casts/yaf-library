@@ -177,8 +177,10 @@ class Log
 
             // File Log Handler
             if (isset($config['file'])) {
-                // @todo bad APP_ROOT
-                $logDir = isset($config['file']['dir']) ? $config['file']['dir'] : APP_ROOT . '/storage/logs';
+                if (!isset($config['file']['dir'])) {
+                    throw new ConfigException('No log config!');
+                }
+                $logDir = $config['file']['dir'];
                 $logFile = $logDir . '/' . $day . '.log';
 
                 $handler = new StreamHandler($logFile, $config['level'], true, 0777);
