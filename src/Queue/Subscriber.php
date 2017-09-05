@@ -2,7 +2,7 @@
 namespace PHPCasts\Queue;
 
 use PHPCasts\Di\InjectionWareTrait;
-use PHPCasts\LoggerAwareTrait;
+use PHPCasts\Log\LoggerAwareTrait;
 
 class Subscriber
 {

@@ -1,8 +1,8 @@
 <?php
 namespace PHPCasts\Queue;
 
-use PHPCasts\Helpers\Str;
-use PHPCasts\LoggerAwareTrait;
+use PHPCasts\Support\Str;
+use PHPCasts\Log\LoggerAwareTrait;
 
 abstract class Queue implements QueueInterface
 {
