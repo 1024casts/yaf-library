@@ -1,4 +1,5 @@
 <?php
+
 namespace PHPCasts\Queue;
 
 interface Job

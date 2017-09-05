@@ -1,4 +1,5 @@
 <?php
+
 namespace PHPCasts\Queue;
 
 class Redis extends Queue
