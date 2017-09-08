@@ -6,7 +6,7 @@ use Yaf\View_Interface;
 use \Twig_Environment;
 use \Twig_Loader_Filesystem;
 
-class Twig implements View_Interface
+class TwigAdapter implements View_Interface
 {
     /** @var \Twig_Loader_Filesystem */
     protected $loader;
