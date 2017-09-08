@@ -1,8 +1,6 @@
 <?php
 namespace PHPCasts\Di;
 
-use PHPCasts\Assert;
-use Common\InnerService;
 use PHPCasts\Events\Manager;
 use Psr\Log\LoggerInterface;
 
@@ -10,10 +8,8 @@ use Psr\Log\LoggerInterface;
  * Class InjectionWareTrait
  *
  * @property Container $di
- * @property Assert $assert
  * @property Manager $eventsManager
  * @property LoggerInterface $logger
- * @property InnerService $innerSrv
  */
 trait InjectionWareTrait
 {

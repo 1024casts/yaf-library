@@ -2,6 +2,7 @@
 
 namespace PHPCasts\Mvc\Controller;
 
+use PHPCasts\Exceptions\ConfigException;
 use PHPCasts\Exceptions\RuntimeException;
 use PHPCasts\Views\View;
 use App\Services\User as UserService;
@@ -32,6 +33,10 @@ class Web extends Base
             $defaultModule = 'Index';
             if (isset($this->config['application']['dispatcher']['defaultController'])) {
                 $defaultModule = $this->config['application']['dispatcher']['defaultController'];
+            }
+
+            if (!defined('APP_PATH')) {
+                throw new ConfigException('No define: APP_PATH !');
             }
 
             if ($this->getModule() === $defaultModule) {

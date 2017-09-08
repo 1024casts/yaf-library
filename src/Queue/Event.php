@@ -1,7 +1,8 @@
 <?php
+
 namespace PHPCasts\Queue;
 
-use PHPCasts\Helpers\Str;
+use PHPCasts\Support\Str;
 
 class Event extends Queue
 {

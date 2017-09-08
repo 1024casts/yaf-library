@@ -3,14 +3,14 @@
 namespace PHPCasts\Mvc;
 
 use PHPCasts\Di\InjectionWareInterface;
-use PHPCasts\Mvc\Controller\Api as PHPCastsApi;
+use PHPCasts\Mvc\Controller\Api;
 use PHPCasts\Di\InjectionWareTrait;
 use PHPCasts\Events\ManagerWareTrait;
 
 /**
  * 基本API控制器, 含DI和EventManager支持
  */
-class ControllerApi extends PHPCastsApi implements InjectionWareInterface
+class Controller extends Api implements InjectionWareInterface
 {
     use InjectionWareTrait;
     use ManagerWareTrait;
