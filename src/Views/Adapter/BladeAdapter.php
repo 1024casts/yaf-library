@@ -1,5 +1,5 @@
 <?php
-namespace PHPCasts\Views\Blade\Adapter;
+namespace PHPCasts\Views\Adapter;
 
 use Illuminate\View\Factory;
 use Yaf\View_Interface;
