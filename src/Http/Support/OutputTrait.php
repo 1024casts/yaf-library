@@ -26,6 +26,7 @@ trait OutputTrait
     {
         $codes = $this->code;
         $code = $codes::SUCCESS;
+
         return $this->output($code, $this->codeMessage($code), $data);
     }
 
@@ -105,6 +106,7 @@ trait OutputTrait
      */
     private function codeMessage($code)
     {
+        // 在控制器中定义code属性后，会优先使用业务定义的代码，否则使用系统定义码
         $codes = $this->code;
         if (isset($codes::$msg[$code])) {
             return $codes::$msg[$code];
