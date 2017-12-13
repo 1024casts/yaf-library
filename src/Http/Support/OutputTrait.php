@@ -2,9 +2,9 @@
 
 namespace PHPCasts\Http\Support;
 
+use Yaf\Response_Abstract;
 use PHPCasts\Exceptions\RuntimeException;
 use PHPCasts\Http\Support\Defines\Code;
-use Yaf\Response_Abstract;
 
 /**
  * 用于格式化的数据输出,目前支持JSON
