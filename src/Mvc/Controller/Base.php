@@ -97,6 +97,23 @@ abstract class Base extends Controller_Abstract
     }
 
     /**
+     * 获取POST数据
+     *
+     * @param string $param
+     * @param mixed|null $defaultValue
+     *
+     * @return mixed
+     */
+    protected function getPost($param = null, $defaultValue = null)
+    {
+        if ($param === null) {
+            return $this->getRequest()->getPost();
+        }
+
+        return $this->getRequest()->getPost($param, $defaultValue);
+    }
+
+    /**
      * 获取参数数据
      *
      * @param string $param
@@ -120,20 +137,16 @@ abstract class Base extends Controller_Abstract
     }
 
     /**
-     * 获取POST数据
-     *
-     * @param string $param
-     * @param mixed|null $defaultValue
-     *
+     * 获取参数数据
      * @return mixed
      */
-    protected function getPost($param = null, $defaultValue = null)
+    protected function getParams()
     {
-        if ($param === null) {
-            return $this->getRequest()->getPost();
-        }
+        $request = $this->getRequest();
 
-        return $this->getRequest()->getPost($param, $defaultValue);
+        $value = $request->getParams();
+
+        return $value;
     }
 
     /**
@@ -189,6 +202,11 @@ abstract class Base extends Controller_Abstract
         return $this->getRequest()->getServer($param, $defaultValue);
     }
 
+    protected function getFiles()
+    {
+        return $this->getRequest()->getFiles()
+    }
+
     /**
      * 请求发放: GET,POST,HEAD,PUT,CLI
      *
@@ -197,6 +215,36 @@ abstract class Base extends Controller_Abstract
     protected function getMethod()
     {
         return $this->getRequest()->getMethod();
+    }
+
+    /**
+     * 是否GET
+     *
+     * @return mixed
+     */
+    protected function isGet()
+    {
+        return $this->getRequest()->isGet();
+    }
+
+    /**
+     * 是否Cli
+     *
+     * @return mixed
+     */
+    protected function isCli()
+    {
+        return $this->getRequest()->isCli();
+    }
+
+    /**
+     * 是否POST
+     *
+     * @return mixed
+     */
+    protected function isPost()
+    {
+        return $this->getRequest()->isPost();
     }
 
     /**
@@ -217,26 +265,6 @@ abstract class Base extends Controller_Abstract
     protected function isDelete()
     {
         return $this->getRequest()->getServer('REQUEST_METHOD') == 'DELETE';
-    }
-
-    /**
-     * 是否GET
-     *
-     * @return mixed
-     */
-    protected function isGet()
-    {
-        return $this->getRequest()->isGet();
-    }
-
-    /**
-     * 是否POST
-     *
-     * @return mixed
-     */
-    protected function isPost()
-    {
-        return $this->getRequest()->isPost();
     }
 
     /**
