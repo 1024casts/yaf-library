@@ -202,9 +202,12 @@ abstract class Base extends Controller_Abstract
         return $this->getRequest()->getServer($param, $defaultValue);
     }
 
+    /**
+     * @return mixed
+     */
     protected function getFiles()
     {
-        return $this->getRequest()->getFiles()
+        return $this->getRequest()->getFiles();
     }
 
     /**
