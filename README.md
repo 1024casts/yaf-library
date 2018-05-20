@@ -96,7 +96,7 @@ use PHPCasts\Yaf\Caches\Cache;
 
 ## 实际使用
 
-[yaf-skeleton]https://github.com/qloog/yaf-skeleton
+[yaf-skeleton](https://github.com/qloog/yaf-skeleton)
 
 ## Docs
 
