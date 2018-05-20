@@ -6,6 +6,7 @@ use PHPCasts\Yaf\Exceptions\ConfigException;
 use PHPCasts\Yaf\Exceptions\RuntimeException;
 use PHPCasts\Yaf\Views\View;
 use App\Services\User as UserService;
+use Yaf\Dispatcher;
 
 /**
  * Web相关的基础控制器
