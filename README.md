@@ -1,37 +1,37 @@
 
 ## 依赖
 
- - PHP
- - Yaf 扩展
- - Composer 
+- PHP
+- Yaf 扩展
+- Composer 
 
-## 为什么要写这个项目
+## 组件
 
-   yaf框架本身是一个比较精简的MVC框架, 本身并没有提供其他类库, 本项目主要提供了一些常用到的类库:
+yaf框架本身是一个比较精简的MVC框架, 本身并没有提供其他类库, 本项目主要提供了一些常用到的组件:
    
-   - 验证码 Captcha
-   - 数据库 ORM
-   - Http 
-   - Cache 
-      - Redis
-      - Memcached
-   - 日志
-   - 上传组件
-   - 校验
-   - 视图
-   - 事件
-   - 依赖注入
+- 验证码 Captcha
+- 数据库 ORM
+- Http 
+- Cache 
+  - Redis
+  - Memcached
+- 日志
+- 上传组件
+- 校验
+- 视图
+- 事件
+- 依赖注入
 
 ## 安装
 
 ### 安装类库 
 
-方式一:
+方式一(用于单项目):
 ```shell
 composer require phpcasts/yaf-library -vvv
 ```
 
-方式二:
+方式二(用于多项目共享):
 
 ```shell
 git clone https://github.com/qloog/yaf-library
@@ -40,7 +40,7 @@ git clone https://github.com/qloog/yaf-library
 修改配置文件的: application.library = APP_PATH "/library"
 为: application.library = APP_ROOT "/../yaf-library" 
 
-PS: yaf-library与项目同级 
+> PS: yaf-library与项目在同一级目录, 达到多项目共享一套 `yaf-library` 的目的,便于维护和管理
 
 ### 添加配置
 
@@ -86,13 +86,17 @@ define('APP_PATH', APP_ROOT . '/application');
 以使用Cache为例:
 
 ```php
-use PHPCasts\Caches\Cache;
+use PHPCasts\Yaf\Caches\Cache;
 ...
  
  $cache = Cache::getInstance();
  $cache->set('test', 'test-value');
 
 ```
+
+## 实际使用
+
+[yaf-skeleton]https://github.com/qloog/yaf-skeleton
 
 ## Docs
 
