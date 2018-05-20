@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPCasts\Views\Exceptions;
+namespace PHPCasts\Yaf\Views\Exceptions;
 
-use PHPCasts\Exceptions\AppException;
+use PHPCasts\Yaf\Exceptions\AppException;
 
 /**
  * 块错误

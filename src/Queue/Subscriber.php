@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPCasts\Queue;
+namespace PHPCasts\Yaf\Queue;
 
-use PHPCasts\Di\InjectionWareTrait;
-use PHPCasts\Log\LoggerAwareTrait;
+use PHPCasts\Yaf\Di\InjectionWareTrait;
+use PHPCasts\Yaf\Log\LoggerAwareTrait;
 
 class Subscriber
 {

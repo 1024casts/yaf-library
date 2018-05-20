@@ -1,5 +1,6 @@
 <?php
-namespace PHPCasts\Rpc\Client;
+
+namespace PHPCasts\Yaf\Rpc\Client;
 
 abstract class Adapter
 {

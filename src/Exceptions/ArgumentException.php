@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Exceptions;
+namespace PHPCasts\Yaf\Exceptions;
 
 /**
  * Class ArgumentException.

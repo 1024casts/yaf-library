@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPCasts\Http\Support;
+namespace PHPCasts\Yaf\Http\Support;
 
-use PHPCasts\Exceptions\RuntimeException;
-use PHPCasts\Http\Support\Defines\Code;
+use PHPCasts\Yaf\Exceptions\RuntimeException;
+use PHPCasts\Yaf\Http\Support\Defines\Code;
 use Yaf\Response_Abstract;
 
 /**

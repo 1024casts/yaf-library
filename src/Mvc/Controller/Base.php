@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Mvc\Controller;
+namespace PHPCasts\Yaf\Mvc\Controller;
 
 use Yaf\Controller_Abstract;
 use Yaf\Dispatcher;
@@ -32,6 +32,7 @@ abstract class Base extends Controller_Abstract
     {
         $this->config = Registry::get('config');
 
+        /** @var \Yaf\Request_Http $request */
         $request = $this->getRequest();
         if (
             $this->autoCheckRequest

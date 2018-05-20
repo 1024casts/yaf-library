@@ -6,13 +6,15 @@
   "type": "library",
   "minimum-stability": "dev",
   "require": {
+    "php": ">=7.0",
+    "ext-yaf": "*",
     "monolog/monolog": "^1.13",
     "pimple/pimple": "^3.0",
-    "phpcasts/yaf-console": "dev-master"
+    "phpcasts/yaf-console": "~1.3.*"
   },
   "autoload": {
       "psr-4": {
-        "PHPCasts\\": "src/"
+        "PHPCasts\\Yaf\\": "src/"
       }
   },
   "require-dev": {

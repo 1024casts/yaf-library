@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Queue;
+namespace PHPCasts\Yaf\Queue;
 
 use PHPCasts\Support\Str;
 use PHPCasts\Log\LoggerAwareTrait;

@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPCasts\Databases;
+namespace PHPCasts\Yaf\Databases;
 
 use Yaf\Registry;
-use PHPCasts\Exceptions\ConfigException;
+use PHPCasts\Yaf\Exceptions\ConfigException;
 use RedisException;
 use Redis;
 

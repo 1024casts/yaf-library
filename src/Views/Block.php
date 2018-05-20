@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPCasts\Views;
+namespace PHPCasts\Yaf\Views;
 
-use PHPCasts\Views\Exceptions\BlockException;
+use PHPCasts\Yaf\Views\Exceptions\BlockException;
 
 /**
  *

@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Support;
+namespace PHPCasts\Yaf\Support;
 
 /**
  * Class XML.

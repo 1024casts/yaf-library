@@ -1,5 +1,6 @@
 <?php
-namespace PHPCasts\Rpc\Server;
+
+namespace PHPCasts\Yaf\Rpc\Server;
 
 interface ServerInterface
 {

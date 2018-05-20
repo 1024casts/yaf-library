@@ -1,5 +1,5 @@
 <?php
-namespace PHPCasts\Di;
+namespace PHPCasts\Yaf\Di;
 
 
 interface InjectionWareInterface

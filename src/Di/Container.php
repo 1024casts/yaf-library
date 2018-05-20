@@ -1,5 +1,5 @@
 <?php
-namespace PHPCasts\Di;
+namespace PHPCasts\Yaf\Di;
 
 use Pimple\Container as PimpleContainer;
 

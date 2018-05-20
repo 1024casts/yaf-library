@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Http\Support\Defines;
+namespace PHPCasts\Yaf\Http\Support\Defines;
 
 /**
  * 状态码定义

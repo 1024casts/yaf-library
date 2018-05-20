@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Log;
+namespace PHPCasts\Yaf\Log;
 
 use Psr\Log\LoggerInterface;
 use Yaf\Registry;
@@ -9,7 +9,7 @@ use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
 use Monolog\Formatter\LineFormatter;
-use PHPCasts\Exceptions\ConfigException;
+use PHPCasts\Yaf\Exceptions\ConfigException;
 
 /**
  * 通用日志类

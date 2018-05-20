@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Validators;
+namespace PHPCasts\Yaf\Validators;
 
 /**
  * 比较是否在范围内

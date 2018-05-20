@@ -1,7 +1,8 @@
 
 ## 依赖
 
- - Yaf PHP扩展
+ - PHP
+ - Yaf 扩展
  - Composer 
 
 ## 为什么要写这个项目
@@ -92,5 +93,13 @@ use PHPCasts\Caches\Cache;
  $cache->set('test', 'test-value');
 
 ```
+
+## Docs
+
+- Yaf Docs: [http://www.php.net/manual/en/book.yaf.php](http://www.php.net/manual/en/book.yaf.php)
+
+## License
+
+MIT
     
 

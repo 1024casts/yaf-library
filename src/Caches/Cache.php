@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPCasts\Caches;
+namespace PHPCasts\Yaf\Caches;
 
-use PHPCasts\Exceptions\ConfigException;
+use PHPCasts\Yaf\Exceptions\ConfigException;
 use Yaf\Registry;
-use PHPCasts\Databases\RedisDb;
+use PHPCasts\Yaf\Databases\RedisDb;
 
 /**
  * 缓存类

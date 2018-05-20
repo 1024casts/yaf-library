@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Databases;
+namespace PHPCasts\Yaf\Databases;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 

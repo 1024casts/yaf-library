@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Http;
+namespace PHPCasts\Yaf\Http;
 
 /**
  * 响应结果

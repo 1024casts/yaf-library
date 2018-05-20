@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Http\Support;
+namespace PHPCasts\Yaf\Http\Support;
 
 /**
  * Cookie操作

@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPCasts\Captcha;
+namespace PHPCasts\Yaf\Captcha;
 
 /**
  * Class Captcha
- * @package PHPCasts\Captcha
+ * @package PHPCasts\Yaf\Captcha
  */
 class Captcha
 {

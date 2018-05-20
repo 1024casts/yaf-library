@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Validators;
+namespace PHPCasts\Yaf\Validators;
 
 /**
  * 数字验证

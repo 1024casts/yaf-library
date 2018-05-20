@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Http;
+namespace PHPCasts\Yaf\Http;
 
 use PHPCasts\Log;
 use CURLFile;

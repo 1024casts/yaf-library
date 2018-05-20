@@ -1,5 +1,6 @@
 <?php
-namespace PHPCasts\Log;
+
+namespace PHPCasts\Yaf\Log;
 
 /**
  * Class LoggerAwareTrait

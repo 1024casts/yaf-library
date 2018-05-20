@@ -1,11 +1,11 @@
 <?php
 
-namespace PHPCasts\Views;
+namespace PHPCasts\Yaf\Views;
 
 use Yaf\Registry;
 use Yaf\View_Interface;
-use PHPCasts\Views\Exceptions\CallException;
-use PHPCasts\Views\Exceptions\RenderException;
+use PHPCasts\Yaf\Views\Exceptions\CallException;
+use PHPCasts\Yaf\Views\Exceptions\RenderException;
 
 /**
  * 扩展视图

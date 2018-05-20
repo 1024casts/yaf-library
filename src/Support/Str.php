@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPCasts\Support;
+namespace PHPCasts\Yaf\Support;
 
-use PHPCasts\Exceptions\RuntimeException;
+use PHPCasts\Yaf\Exceptions\RuntimeException;
 
 class Str
 {

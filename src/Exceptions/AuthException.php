@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Exceptions;
+namespace PHPCasts\Yaf\Exceptions;
 
 /**
  * 应用抛出的异常，认证错误

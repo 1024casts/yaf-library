@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPCasts\Validators;
+namespace PHPCasts\Yaf\Validators;
 
-use PHPCasts\Exceptions\ParamsException;
+use PHPCasts\Yaf\Exceptions\ParamsException;
 
 /**
  * 字符串验证

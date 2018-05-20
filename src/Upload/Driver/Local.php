@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Upload\Driver;
+namespace PHPCasts\Yaf\Upload\Driver;
 
 class Local
 {

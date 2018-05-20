@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPCasts\Mvc\Controller;
+namespace PHPCasts\Yaf\Mvc\Controller;
 
-use PHPCasts\Exceptions\ConfigException;
-use PHPCasts\Exceptions\RuntimeException;
-use PHPCasts\Views\View;
+use PHPCasts\Yaf\Exceptions\ConfigException;
+use PHPCasts\Yaf\Exceptions\RuntimeException;
+use PHPCasts\Yaf\Views\View;
 use App\Services\User as UserService;
 
 /**

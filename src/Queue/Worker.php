@@ -2,8 +2,8 @@
 
 namespace PHPCasts\Queue;
 
-use PHPCasts\Di\InjectionWareTrait;
-use PHPCasts\Log\LoggerAwareTrait;
+use PHPCasts\Yaf\Di\InjectionWareTrait;
+use PHPCasts\Yaf\Log\LoggerAwareTrait;
 
 class Worker
 {

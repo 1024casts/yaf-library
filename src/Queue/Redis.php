@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Queue;
+namespace PHPCasts\Yaf\Queue;
 
 class Redis extends Queue
 {

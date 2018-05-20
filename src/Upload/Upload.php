@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPCasts\Upload;
+namespace PHPCasts\Yaf\Upload;
 
-use PHPCasts\Exceptions\ConfigException;
+use PHPCasts\Yaf\Exceptions\ConfigException;
 
 class Upload
 {

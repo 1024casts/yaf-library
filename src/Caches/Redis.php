@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Caches;
+namespace PHPCasts\Yaf\Caches;
 
 /**
  * Redis Cache

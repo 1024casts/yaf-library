@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Mvc\Controller;
+namespace PHPCasts\Yaf\Mvc\Controller;
 
 
 use PHPCasts\Exceptions\RuntimeException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Views\Adapter;
+namespace PHPCasts\Yaf\Views\Adapter;
 
 use Yaf\View_Interface;
 use \Twig_Environment;

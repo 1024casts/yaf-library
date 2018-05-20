@@ -1,7 +1,8 @@
 <?php
-namespace PHPCasts\Rpc\Server;
 
-use PHPCasts\Mvc\ControllerApi;
+namespace PHPCasts\Yaf\Rpc\Server;
+
+use PHPCasts\Yaf\Mvc\ControllerApi;
 
 /**
  * RPC服务端JSON实现-controller入口

@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPCasts\Mvc\Controller;
+namespace PHPCasts\Yaf\Mvc\Controller;
 
-use PHPCasts\Exceptions\RuntimeException;
+use PHPCasts\Yaf\Exceptions\RuntimeException;
 
 /**
  * Console相关的基础控制器

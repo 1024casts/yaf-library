@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts\Views\Adapter;
+namespace PHPCasts\Yaf\Views\Adapter;
 
 use Illuminate\Contracts\Events\Dispatcher as Dsp;
 

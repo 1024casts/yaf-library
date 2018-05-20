@@ -1,10 +1,11 @@
 <?php
-namespace PHPCasts\Rpc\Client\Json;
 
-use PHPCasts\Support\Str;
-use PHPCasts\Http\Client;
-use PHPCasts\Support\Log;
-use PHPCasts\Rpc\Client\Adapter;
+namespace PHPCasts\Yaf\Rpc\Client\Json;
+
+use PHPCasts\Yaf\Support\Str;
+use PHPCasts\Yaf\Http\Client;
+use PHPCasts\Yaf\Support\Log;
+use PHPCasts\Yaf\Rpc\Client\Adapter;
 
 /**
  * 内部JSON-RPC客户端实现

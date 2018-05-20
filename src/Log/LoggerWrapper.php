@@ -1,5 +1,5 @@
 <?php
-namespace PHPCasts\Log;
+namespace PHPCasts\Yaf\Log;
 
 // @todo should not wrapper
 /**

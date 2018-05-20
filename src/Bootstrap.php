@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPCasts;
+namespace PHPCasts\Yaf;
 
 use Yaf\Dispatcher;
 

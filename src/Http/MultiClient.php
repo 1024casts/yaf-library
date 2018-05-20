@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPCasts\Http;
+namespace PHPCasts\Yaf\Http;
 
-use PHPCasts\Exceptions\RuntimeException;
-use PHPCasts\Log;
+use PHPCasts\Yaf\Exceptions\RuntimeException;
+use PHPCasts\Yaf\Log;
 
 /**
  * Http 并发客户端
