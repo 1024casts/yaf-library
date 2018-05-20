@@ -55,7 +55,7 @@ abstract class Base extends Controller_Abstract
      */
     protected function getModule()
     {
-        return $this->getRequest()->module;
+        return $this->getRequest()->getModuleName();
     }
 
     /**
@@ -66,7 +66,7 @@ abstract class Base extends Controller_Abstract
      */
     protected function getController()
     {
-        return $this->getRequest()->controller;
+        return $this->getRequest()->getControllerName();
     }
 
     /**
@@ -77,7 +77,7 @@ abstract class Base extends Controller_Abstract
      */
     protected function getAction()
     {
-        return $this->getRequest()->action;
+        return $this->getRequest()->getActionName();
     }
 
     /**
@@ -143,11 +143,7 @@ abstract class Base extends Controller_Abstract
      */
     protected function getParams()
     {
-        $request = $this->getRequest();
-
-        $value = $request->getParams();
-
-        return $value;
+        return $this->getRequest()->getParams();
     }
 
     /**
@@ -162,6 +158,8 @@ abstract class Base extends Controller_Abstract
      */
     public function get($param = null, $defaultValue = null)
     {
+        // return $this->getRequest()->get($param, $defaultValue);
+
         if ($param === null) {
             return $_REQUEST;
         }

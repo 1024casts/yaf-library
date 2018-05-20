@@ -47,6 +47,11 @@ class Web extends Base
         }
 
         $this->_view = new View($viewPath);
+
+        // 如果不调用该代码，display后，框架还会再自动渲染代码一次，导致重复渲染
+        Dispatcher::getInstance()->autoRender(false);
+        // or
+        //Yaf\Dispatcher::getInstance()->disableView();
     }
 
     /**
@@ -70,6 +75,18 @@ class Web extends Base
             'assets' => '/',
             'userInfo' => $this->loginUser,
         ];
+    }
+
+    /**
+     * 分配模板变量
+     *
+     * @param string $name
+     * @param mixed  $value
+     * @return bool
+     */
+    public function assign($name, $value)
+    {
+        return $this->_view->assign($name, $value);
     }
 
     /**

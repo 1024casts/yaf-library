@@ -74,7 +74,7 @@ trait OutputTrait
             'code' => $code,
             'msg' => $msg,
             'data' => $data === null ? [] : $data,
-        ], $data === null ? JSON_FORCE_OBJECT : 0);
+        ], $data === null ? JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE: 0);
 
         $response = null;
         if (method_exists($this, 'getResponse')) {
