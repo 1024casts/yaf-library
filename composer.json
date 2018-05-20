@@ -10,7 +10,7 @@
     "ext-yaf": "*",
     "monolog/monolog": "^1.13",
     "pimple/pimple": "^3.0",
-    "phpcasts/yaf-console": "~1.3.*"
+    "phpcasts/yaf-console": "*"
   },
   "autoload": {
       "psr-4": {
