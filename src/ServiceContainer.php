@@ -47,11 +47,7 @@ class ServiceContainer extends Container implements ContainerInterface
 
     public function get($id)
     {
-        try {
-            return $this->offsetGet($id);
-        } catch (\InvalidArgumentException $exception) {
-            // 异常处理...
-        }
+        return $this->offsetGet($id);
     }
 
     public function has($id)
@@ -59,14 +55,14 @@ class ServiceContainer extends Container implements ContainerInterface
         return $this->offsetExists($id);
     }
 
-    public function __set($name, $value)
+    public function __set($id, $value)
     {
-        $this->offsetSet($name, $value);
+        $this->offsetSet($id, $value);
     }
 
-    public function __get($name)
+    public function __get($id)
     {
-        return $this->offsetGet($name);
+        return $this->offsetGet($id);
     }
 
     public function registerProviders(array $providers)

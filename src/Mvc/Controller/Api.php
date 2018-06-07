@@ -2,10 +2,9 @@
 
 namespace PHPCasts\Yaf\Mvc\Controller;
 
-
-use PHPCasts\Exceptions\RuntimeException;
-use PHPCasts\Http\Support\Defines\Code;
-use PHPCasts\Http\Support\OutputTrait;
+use PHPCasts\Yaf\Exceptions\RuntimeException;
+use PHPCasts\Yaf\Http\Support\Defines\Code;
+use PHPCasts\Yaf\Http\Support\OutputTrait;
 use Yaf\Exception\LoadFailed\Action;
 
 /**
@@ -59,7 +58,7 @@ class Api extends Base
      * @param array  $varArray
      *
      * @return bool|void
-     * @throws \PHPCasts\Exceptions\RuntimeException
+     * @throws RuntimeException
      */
     public function display($actionName, array $varArray = [])
     {
