@@ -2,7 +2,7 @@
 
 namespace PHPCasts\Yaf\Caches;
 
-use Psr\SimpleCache\CacheInterface;
+use InvalidArgumentException;
 
 /**
  * Memcached Cache
@@ -71,7 +71,7 @@ class Memcached implements CacheInterface
     public function getMultiple($keys, $default = null)
     {
         if (!is_array($keys)) {
-            return false;
+            throw new InvalidArgumentException(sprintf('Cache keys must be array, "%s" given', is_object($keys) ? get_class($keys) : gettype($keys)));
         }
 
         foreach ($keys as $n => $k){
@@ -91,10 +91,24 @@ class Memcached implements CacheInterface
     public function setMultiple($data, $expire = 0)
     {
         if (!is_array($data)) {
-            return false;
+            throw new InvalidArgumentException(sprintf('Cache data must be array, "%s" given', is_object($data) ? get_class($data) : gettype($data)));
         }
 
         return $this->setMulti($data, $expire);
+    }
+
+    /**
+     * 批量删除缓存
+     * @param array $keys
+     * @return bool
+     */
+    public function deleteMultiple($keys)
+    {
+        if (!is_array($keys)) {
+            throw new InvalidArgumentException(sprintf('Cache keys must be array, "%s" given', is_object($keys) ? get_class($keys) : gettype($keys)));
+        }
+
+        return $this->mem->deleteMulti($keys);
     }
 
     /**
@@ -104,9 +118,10 @@ class Memcached implements CacheInterface
      * @param int $expire 有效期, 0为不过期
      * @return bool 成功返回true, 失败false
      */
-    public function setExpire($key, $expire = 0)
+    public function expireAfter($key, $expire = 0)
     {
         $val = $this->mem->get($key);
+
         if (isset($val)) {
             return $this->set($key, $val, $expire);
         }
@@ -124,15 +139,8 @@ class Memcached implements CacheInterface
     public function expiresAt($key, $time = 0)
     {
         $expire = $time - time();
-        return $this->setExpire($key,$expire);
-    }
 
-    /**
-     * @inheritdoc
-     */
-    public function deleteMultiple($keys)
-    {
-        return $this->mem->deleteMulti($keys);
+        return $this->expireAfter($key, $expire);
     }
 
     /**

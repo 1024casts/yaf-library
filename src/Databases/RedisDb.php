@@ -8,7 +8,7 @@ use RedisException;
 use Redis;
 
 /**
- * Redis数据库
+ * Redis 数据库
  */
 class RedisDb extends Redis
 {

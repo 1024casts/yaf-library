@@ -2,8 +2,8 @@
 
 namespace PHPCasts\Yaf\Caches;
 
-use PHPCasts\Yaf\Exceptions\ConfigException;
 use Yaf\Registry;
+use PHPCasts\Yaf\Exceptions\ConfigException;
 use PHPCasts\Yaf\Databases\RedisDb;
 
 /**
