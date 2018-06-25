@@ -1,7 +1,7 @@
 <?php
 namespace PHPCasts\Mvc\Model;
 
-use PHPCasts\Caches\CacheInterface;
+use PHPCasts\Yaf\Caches\CacheInterface;
 
 /**
  * Trait CacheTrait

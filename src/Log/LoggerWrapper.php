@@ -20,6 +20,6 @@ class LoggerWrapper
             return null;
         }
 
-        return call_user_func_array("\\PHPCasts\\Log::{$method}", $params);
+        return call_user_func_array("\\PHPCasts\\Yaf\\Log::{$method}", $params);
     }
 }
