@@ -1,4 +1,5 @@
 <?php
+
 namespace PHPCasts\Yaf\Events;
 
 use SplPriorityQueue as PriorityQueue;
