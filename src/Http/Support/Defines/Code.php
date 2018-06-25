@@ -23,15 +23,15 @@ class Code
      * @var array
      */
     public static $msg = [
-        self::UNDEFINED_ERROR => 'undefined error',
-        self::SUCCESS => 'ok',
-        self::BAD_REQUEST => 'bad request',
-        self::AUTH_FAILED => 'auth failed',
+        self::UNDEFINED_ERROR   => 'undefined error',
+        self::SUCCESS           => 'ok',
+        self::BAD_REQUEST       => 'bad request',
+        self::AUTH_FAILED       => 'auth failed',
         self::PERMISSION_DENIED => 'permission denied',
-        self::NOT_FOUND => 'not found',
-        self::PARAMS_ERROR => 'params error',
-        self::NOT_LOGIN => 'not login',
-        self::SERVER_ERROR => 'server error',
+        self::NOT_FOUND         => 'not found',
+        self::PARAMS_ERROR      => 'params error',
+        self::NOT_LOGIN         => 'not login',
+        self::SERVER_ERROR      => 'server error',
     ];
 
     /**
