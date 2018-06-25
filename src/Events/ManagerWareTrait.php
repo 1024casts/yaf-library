@@ -1,4 +1,5 @@
 <?php
+
 namespace PHPCasts\Yaf\Events;
 
 /**
@@ -11,7 +12,7 @@ trait ManagerWareTrait
     /**
      * 设置事件管理对象
      *
-     * @param \PHPCasts\Events\Manager $em
+     * @param \PHPCasts\Yaf\Events\Manager $em
      */
     public function setEventsManager($em)
     {

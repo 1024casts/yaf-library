@@ -1,5 +1,5 @@
 <?php
-namespace PHPCasts\Mvc\Model;
+namespace PHPCasts\Yaf\Mvc\Model;
 
 use PHPCasts\Yaf\Caches\CacheInterface;
 

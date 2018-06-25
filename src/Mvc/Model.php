@@ -6,9 +6,9 @@ use PHPCasts\Yaf\Di\InjectionWareInterface;
 use PHPCasts\Yaf\Di\InjectionWareTrait;
 use PHPCasts\Yaf\Caches\Memory;
 use PHPCasts\Yaf\Events\ManagerWareTrait;
-use PHPCasts\Mvc\Model\CacheTrait;
-use PHPCasts\Mvc\Model\DbTrait;
-use PHPCasts\Mvc\Model\RedisTrait;
+use PHPCasts\Yaf\Mvc\Model\CacheTrait;
+use PHPCasts\Yaf\Mvc\Model\DbTrait;
+use PHPCasts\Yaf\Mvc\Model\RedisTrait;
 
 class Model implements InjectionWareInterface
 {
