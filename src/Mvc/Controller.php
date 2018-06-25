@@ -2,10 +2,10 @@
 
 namespace PHPCasts\Mvc;
 
-use PHPCasts\Di\InjectionWareInterface;
-use PHPCasts\Mvc\Controller\Api;
-use PHPCasts\Di\InjectionWareTrait;
-use PHPCasts\Events\ManagerWareTrait;
+use PHPCasts\Yaf\Di\InjectionWareInterface;
+use PHPCasts\Yaf\Mvc\Controller\Api;
+use PHPCasts\Yaf\Di\InjectionWareTrait;
+use PHPCasts\Yaf\Events\ManagerWareTrait;
 
 /**
  * 基本API控制器, 含DI和EventManager支持
