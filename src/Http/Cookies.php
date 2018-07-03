@@ -60,6 +60,7 @@ class Cookies
         }
 
         $configs = Registry::get('config');
+
         return static::$config = isset($configs['cookie']) ? $configs['cookie'] : [];
     }
 
@@ -73,6 +74,7 @@ class Cookies
     {
         static::$instance = null;
         static::$config = $configs;
+
         return true;
     }
 }

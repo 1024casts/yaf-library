@@ -1,7 +1,8 @@
 <?php
-namespace PHPCasts\Mvc\Model;
 
-use PHPCasts\Databases\MedooWrapper;
+namespace PHPCasts\Yaf\Mvc\Model;
+
+use PHPCasts\Yaf\Databases\MedooWrapper;
 
 /**
  * Class DbTrait

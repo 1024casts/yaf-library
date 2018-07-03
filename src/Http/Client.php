@@ -62,6 +62,7 @@ class Client
 
     /**
      * Client constructor.
+     *
      * @param bool $isMulti
      */
     public function __construct($isMulti = false)

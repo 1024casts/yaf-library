@@ -1,5 +1,6 @@
 <?php
-namespace PHPCasts\Mvc\Model;
+
+namespace PHPCasts\Yaf\Mvc\Model;
 
 /**
  * Trait RedisTrait

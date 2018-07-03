@@ -1,10 +1,12 @@
 <?php
+
 namespace PHPCasts\Yaf\Events;
 
 interface SubscriberInterface
 {
     /**
      * 获取订阅的事件
+     *
      * @attention copy from symfony/event-dispatcher
      *
      * 如:

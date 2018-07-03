@@ -2,6 +2,8 @@
 
 namespace PHPCasts\Yaf\Caches;
 
+use InvalidArgumentException;
+
 /**
  * Memcached Cache
  */
@@ -24,39 +26,15 @@ class Memcached implements CacheInterface
     }
 
     /**
-     * 断开连接
-     */
-    public function __destruct()
-    {
-        $this->mem->quit();
-    }
-
-    /**
      * 获取缓存
      *
      * @param string $key
+     * @param null $default
      * @return mixed
      */
-    public function get($key)
+    public function get($key, $default = null)
     {
         return $this->mem->get($key);
-    }
-
-    /**
-     * 批量读取缓存
-     *
-     * @param array $keys 要读取的缓存Key列表
-     * @return array Key到值的Map
-     */
-    public function getMulti($keys)
-    {
-        if (!is_array($keys)) {
-            return false;
-        }
-        foreach ($keys as $n => $k){
-            $keys[$n] = $this->mem->get($k);
-        }
-        return $this->mem->getMulti($keys);
     }
 
     /**
@@ -73,18 +51,64 @@ class Memcached implements CacheInterface
     }
 
     /**
+     * 删除缓存
+     *
+     * @param string $key 缓存Key
+     * @return bool 成功返回true, 失败false
+     */
+    public function delete($key)
+    {
+        return $this->mem->delete($key);
+    }
+
+    /**
+     * 批量读取缓存
+     *
+     * @param array $keys 要读取的缓存Key列表
+     * @param null $default
+     * @return array Key到值的Map
+     */
+    public function getMultiple($keys, $default = null)
+    {
+        if (!is_array($keys)) {
+            throw new InvalidArgumentException(sprintf('Cache keys must be array, "%s" given', is_object($keys) ? get_class($keys) : gettype($keys)));
+        }
+
+        foreach ($keys as $n => $k){
+            $keys[$n] = $this->mem->get($k);
+        }
+
+        return $this->mem->getMulti($keys);
+    }
+
+    /**
      * 批量设置缓存
      *
      * @param array $data 要设置的缓存,键为缓存的Key
      * @param int $expire 有效期, 0为不过期
      * @return array Key到值的Map
      */
-    public function setMulti($data, $expire = 0)
+    public function setMultiple($data, $expire = 0)
     {
         if (!is_array($data)) {
-            return false;
+            throw new InvalidArgumentException(sprintf('Cache data must be array, "%s" given', is_object($data) ? get_class($data) : gettype($data)));
         }
+
         return $this->setMulti($data, $expire);
+    }
+
+    /**
+     * 批量删除缓存
+     * @param array $keys
+     * @return bool
+     */
+    public function deleteMultiple($keys)
+    {
+        if (!is_array($keys)) {
+            throw new InvalidArgumentException(sprintf('Cache keys must be array, "%s" given', is_object($keys) ? get_class($keys) : gettype($keys)));
+        }
+
+        return $this->mem->deleteMulti($keys);
     }
 
     /**
@@ -94,9 +118,10 @@ class Memcached implements CacheInterface
      * @param int $expire 有效期, 0为不过期
      * @return bool 成功返回true, 失败false
      */
-    public function setExpire($key, $expire = 0)
+    public function expireAfter($key, $expire = 0)
     {
         $val = $this->mem->get($key);
+
         if (isset($val)) {
             return $this->set($key, $val, $expire);
         }
@@ -114,26 +139,8 @@ class Memcached implements CacheInterface
     public function expiresAt($key, $time = 0)
     {
         $expire = $time - time();
-        return $this->setExpire($key,$expire);
-    }
 
-    /**
-     * 删除缓存
-     *
-     * @param string $key 缓存Key
-     * @return bool 成功返回true, 失败false
-     */
-    public function delete($key)
-    {
-        return $this->mem->delete($key);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function deleteMulti($keys)
-    {
-        return $this->mem->deleteMulti($keys);
+        return $this->expireAfter($key, $expire);
     }
 
     /**
@@ -159,5 +166,24 @@ class Memcached implements CacheInterface
     public function decrement($key, $offset = 1)
     {
         return $this->mem->decrement($key, $offset);
+    }
+
+    public function clear()
+    {
+        
+    }
+
+    public function has($key)
+    {
+        return false;
+    }
+
+
+    /**
+     * 断开连接
+     */
+    public function __destruct()
+    {
+        $this->mem->quit();
     }
 }

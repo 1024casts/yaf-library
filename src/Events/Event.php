@@ -1,4 +1,5 @@
 <?php
+
 namespace PHPCasts\Yaf\Events;
 
 class Event
