@@ -3,7 +3,7 @@
 namespace PHPCasts\Yaf\Http;
 
 use PHPCasts\Yaf\Exceptions\RuntimeException;
-use PHPCasts\Yaf\Log;
+use PHPCasts\Yaf\Log\Log;
 
 /**
  * Http 并发客户端

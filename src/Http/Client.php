@@ -2,7 +2,7 @@
 
 namespace PHPCasts\Yaf\Http;
 
-use PHPCasts\Log;
+use PHPCasts\Yaf\Log\Log;
 use CURLFile;
 use Yaf\Registry;
 
