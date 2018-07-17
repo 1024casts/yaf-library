@@ -8,7 +8,7 @@ use PHPCasts\Yaf\Log\Log;
 /**
  * Console 相关的基础控制器
  */
-abstract class Console extends Base
+class Console extends Base
 {
 
     /* vars */
@@ -21,13 +21,12 @@ abstract class Console extends Base
     protected $intStartTime = 0;
     protected $intOverTime = 0;
     protected $intNowTime = 0;
+    protected $intDuration = 60;    // 默认执行时长
 
     public function init()
     {
         $this->intStartTime = strtotime(strval(date('YmdHi') . '00'));
-        $this->intOverTime = $this->intStartTime + 60; // 执行60s
-
-        $this->strLockFile = '/tmp/'.__CLASS__.'.lock';
+        $this->intOverTime = $this->intStartTime + $this->intDuration; // 执行时长
 
         $ret = $this->_lock();
         if ($ret === false) {
@@ -38,13 +37,7 @@ abstract class Console extends Base
         return true;
     }
 
-    // 子类必须重写此方法
-    public function exec()
-    {
-
-    }
-
-    protected function __destruct()
+    public function over()
     {
         $ret = $this->_unLock();
         if ($ret === false) {
@@ -65,7 +58,7 @@ abstract class Console extends Base
         $ret = flock($this->objLockFd, LOCK_EX | LOCK_NB);
         while ($ret === false && $this->intNowTime < $this->intOverTime) {
             $this->intNowTime = time();
-            $ret = flock($this->_objLockFd, LOCK_EX | LOCK_NB);
+            $ret = flock($this->objLockFd, LOCK_EX | LOCK_NB);
             if ($ret !== false) {
                 return true;
             }
@@ -102,10 +95,10 @@ abstract class Console extends Base
      *
      * @param string $actionName
      * @param array $varArray
+     * @return void
      * @throws RuntimeException
-     * @return bool
      */
-    public function display($actionName, array $varArray = [])
+    public function display($actionName, array $varArray = null)
     {
         throw new RuntimeException('Abandon method!');
     }
