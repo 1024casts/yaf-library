@@ -20,11 +20,11 @@ use Psr\Container\ContainerInterface;
  * Class ServiceContainer
  * @package PHPCasts\Yaf
  *
- * @property \Yaf\Config_Abstract       $config
- * @property \Yaf\Session               $session
- * @property \Monolog\Logger            $logger|$log
- * @property \Redis                     $redis
- * @property \PHPCasts\Yaf\Caches\Cache $cache
+ * @property \Yaf\Config_Abstract                $config
+ * @property \Yaf\Session                        $session
+ * @property \Monolog\Logger                     $logger|$log
+ * @property \Redis                              $redis
+ * @property \PHPCasts\Yaf\Caches\CacheInterface $cache
  */
 class ServiceContainer extends Container implements ContainerInterface
 {
