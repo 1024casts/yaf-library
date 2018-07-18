@@ -7,26 +7,42 @@
 
 namespace PHPCasts\Yaf;
 
+use PHPCasts\Yaf\Providers\CacheServiceProvider;
+use PHPCasts\Yaf\Providers\ConfigServiceProvider;
+use PHPCasts\Yaf\Providers\EventManagerServiceProvider;
+use PHPCasts\Yaf\Providers\LogServiceProvider;
+use PHPCasts\Yaf\Providers\RedisServiceProvider;
+use PHPCasts\Yaf\Providers\SessionServiceProvider;
 use Pimple\Container;
 use Psr\Container\ContainerInterface;
 
 class ServiceContainer extends Container implements ContainerInterface
 {
 
-    protected $providers;
+    /**
+     * @var array
+     */
+    protected $providers = [];
 
     public function __construct(array $providers = [])
     {
-        if ($providers) {
-            parent::__construct($providers);
-        }
-
+        // system default
         $this->registerProviders($this->getProviders());
+
+        // custom
+        parent::__construct($providers);
     }
 
     public function getProviders()
     {
-        return $this->providers;
+        return array_merge([
+            ConfigServiceProvider::class,
+            SessionServiceProvider::class,
+            LogServiceProvider::class,
+            RedisServiceProvider::class,
+            CacheServiceProvider::class,
+            EventManagerServiceProvider::class,
+        ], $this->providers);
     }
 
     public function addProvider($provider)
@@ -47,7 +63,11 @@ class ServiceContainer extends Container implements ContainerInterface
 
     public function get($id)
     {
-        return $this->offsetGet($id);
+        try {
+            return $this->offsetGet($id);
+        } catch (\InvalidArgumentException $exception) {
+            // 异常处理...
+        }
     }
 
     public function has($id)
@@ -55,14 +75,14 @@ class ServiceContainer extends Container implements ContainerInterface
         return $this->offsetExists($id);
     }
 
-    public function __set($id, $value)
+    public function __set($name, $value)
     {
-        $this->offsetSet($id, $value);
+        $this->offsetSet($name, $value);
     }
 
-    public function __get($id)
+    public function __get($name)
     {
-        return $this->offsetGet($id);
+        return $this->offsetGet($name);
     }
 
     public function registerProviders(array $providers)
