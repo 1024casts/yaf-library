@@ -7,12 +7,12 @@ if (!function_exists('app')) {
      * @param $make
      * @return \PHPCasts\Yaf\ServiceContainer
      */
-    function app($make)
+    function app($make = null)
     {
         $container = Registry::get('container');
 
-        if (!isset($container[$make])) {
-            throw new InvalidArgumentException('not exist in container');
+        if (is_null($make)) {
+            return $container;
         }
 
         return $container[$make];
