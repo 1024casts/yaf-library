@@ -2,7 +2,7 @@
 
 namespace PHPCasts\Yaf\Providers;
 
-use PHPCasts\Yaf\Caches\Redis;
+use PHPCasts\Yaf\Caches\Cache;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
@@ -18,8 +18,11 @@ class CacheServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $pimple)
     {
-        $pimple['cache'] = function ($app) {
-            return new Redis($app['redis']);
+        $pimple['cache'] = function () {
+            $cache = new Cache();
+
+            return $cache::getInstance();
         };
+
     }
 }
