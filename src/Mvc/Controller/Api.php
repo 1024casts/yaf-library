@@ -60,7 +60,7 @@ class Api extends Base
      * @return bool|void
      * @throws RuntimeException
      */
-    public function display($actionName, array $varArray = [])
+    public function display($actionName, array $varArray = null)
     {
         throw new RuntimeException('Abandon method!');
     }
