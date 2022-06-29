@@ -6,7 +6,7 @@
 ```php
 
 use Yaf\Session;
-use PHPCasts\Captcha/Captcha;
+use PHPCasts\Captcha\Captcha;
 
 $captcha = new Captcha(4, 100, 30);
 Session::getInstance()->set('captcha', strtolower($captcha->getCode()));
